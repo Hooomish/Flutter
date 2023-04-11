@@ -1,7 +1,15 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-final String assetName = 'assets/1.svg';
+final List<String> list = ['assets/1.svg',
+                           'assets/2.svg',
+                           'assets/3.svg',
+                           'assets/4.svg',
+                           'assets/5.svg'];
 
 void main() {
   runApp(_MyApp());
@@ -17,13 +25,25 @@ class _MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("Flutter Demo Home Page"),
+              title: const Text("Flutter Demo Home Page"),
               centerTitle: true,
             ),
-            body: Column(children: <Widget>[
-              SvgPicture.asset(assetName),
+            body: ListView(children: <Widget>[
+              SvgPicture.asset(list[0]),
+              CarouselSlider(
+                  options: CarouselOptions(),
+                  items: list
+                      .map((item) => SvgPicture.asset(item))
+                      .toList()
+              )
             ])
-        ));
+            //body: CarouselSlider(
+            //    options: CarouselOptions(),
+            //    items: list
+            //        .map((item) => SvgPicture.asset(item))
+            //        .toList()
+            //)
+        )
+    );
   }
 }
-
