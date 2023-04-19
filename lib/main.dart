@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 //import 'package:carousel_slider/;
-//import 'package:carousel_slider/';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:shimmer/shimmer.dart';
+import 'package:shimmer/shimmer.dart';
 
 final List<String> list = ['assets/1.svg',
                            'assets/2.svg',
