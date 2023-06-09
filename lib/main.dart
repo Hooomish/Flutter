@@ -2,10 +2,9 @@
 import 'package:flutter/material.dart';
 
 // Package imports:
-//import 'package:carousel_slider/;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shimmer/shimmer.dart';
+
 
 final List<String> list = ['assets/1.svg',
                            'assets/2.svg',
@@ -32,19 +31,13 @@ class _MyApp extends StatelessWidget {
             ),
             body: ListView(children: <Widget>[
               SvgPicture.network('https://svgsilh.com/svg/1181528.svg'),
-              /*CarouselSlider(
+              CarouselSlider(
                   options: CarouselOptions(),
                   items: list
                       .map((item) => SvgPicture.asset(item))
                       .toList()
-              )*/
+              )
             ])
-            //body: CarouselSlider(
-            //    options: CarouselOptions(),
-            //    items: list
-            //        .map((item) => SvgPicture.asset(item))
-            //        .toList()
-            //)
         )
     );
   }
