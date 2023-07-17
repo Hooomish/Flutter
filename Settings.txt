@@ -1,0 +1,5 @@
+\android\app\build.gradle -> compileSdkVersion 31
+\android\app\src\main\AndroidManifest.xml -> android:name="${applicationName}"
+\android\build.gradle -> ext.kotlin_version = '1.7.10', classpath 'com.android.tools.build:gradle:7.3.0'
+\android\gradle\wrapper\gradle-wrapper.properties -> distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip
+pubspec.yaml -> sdk: ">=2.12.0 <3.0.0", cupertino_icons: ^1.0.5
